@@ -13,7 +13,7 @@ namespace Services.Services
         public Func<Student, bool> ParseCriteria(Dictionary<string, string> criteria)
         {
             Func<Student, bool> parsedCriteria = x => { return true; };
-            //Here I'm going to implement a pretty single (and probably poorly implemented) solution and without any flexibility I should probably build a dynamic Expression to return the lambda needed based on the amount of criterias provided but I'm not going to go too far for this example
+            //Here I'm going to implement a pretty simple (and probably poorly implemented) solution and without any flexibility I should probably build a dynamic Expression to return the lambda needed based on the amount of criterias provided but I'm not going to go too far for this example
             if (criteria.ContainsKey("type") && criteria.ContainsKey("gender") && criteria.ContainsKey("name"))
             {
                 parsedCriteria = x => x.Type == (StudentType)Enum.Parse(typeof(StudentType), criteria["type"]) &&
