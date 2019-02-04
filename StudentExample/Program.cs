@@ -33,7 +33,6 @@ namespace StudentExample
                 String.Format("{0} {1} {2} {3}", x.Type.ToString(), x.Name, x.Gender.ToString(), x.LastModified.ToString())
                 ));
             Console.Write(sb.ToString());
-            Console.ReadLine();
         }
     }
 }
