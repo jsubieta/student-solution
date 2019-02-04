@@ -9,7 +9,7 @@ namespace Data.Base
 {
     public abstract class AbstractRepository <T> 
     {
-        private static List<T> storage = new List<T>();
+        private static List<T> storage = new List<T>();  //TODO: Replace for some persitent storage
         
         public void Add(T entity)
         {
